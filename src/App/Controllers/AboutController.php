@@ -19,7 +19,8 @@ class AboutController
     public function about()
     {
         echo $this->view->render("about.php", [
-            'title' => '...'
+            'title' => 'About',
+            'dangerousData' => '<script>alert(123)</script>'
         ]);
     }
 }
