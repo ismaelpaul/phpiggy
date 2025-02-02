@@ -2,6 +2,12 @@
 	"name": "isma/phpiggy",
 	"description": "A PHP app for tracking expenses",
 	"type": "project",
+	"authors": [
+		{
+			"name": "ismaelpaul",
+			"email": "ismaafp@gmail.com"
+		}
+	],
 	"require": {
 		"vlucas/phpdotenv": "^5.6"
 	},
