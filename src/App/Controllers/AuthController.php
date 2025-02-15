@@ -35,4 +35,20 @@ class AuthController
   {
     echo $this->view->render("login.php");
   }
+
+  public function login()
+  {
+    $this->validatorService->validateLogin($_POST);
+
+    $this->userService->login($_POST);
+
+    redirectTo('/');
+  }
+
+  public function logout()
+  {
+    $this->userService->logout();
+
+    redirectTo('/login');
+  }
 }
