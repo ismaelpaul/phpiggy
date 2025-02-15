@@ -37,7 +37,7 @@ class UserService
                 'password' => $password,
                 'age' => $formData['age'],
                 'country' => $formData['country'],
-                'url' => $formData['socialMediaUrl']
+                'url' => $formData['socialMediaURL']
             ]
         );
 
