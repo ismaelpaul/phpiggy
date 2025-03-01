@@ -9,4 +9,9 @@ class Paths
   public const VIEW = __DIR__ . "/../views";
   public const SOURCE = __DIR__ . "/../../";
   public const ROOT = __DIR__ . "/../../../";
+
+  public static function getStorageUploads(): string
+  {
+    return realpath(self::ROOT . "/storage/uploads") ?: self::ROOT . "/storage/uploads";
+  }
 }
