@@ -53,7 +53,9 @@ class UserService
             ['email' => $formData['email']]
         )->find();
 
-        $passwordsMatch = password_verify($formData['password'], $user['password'] ?? '');
+        $passwordHashed = password_hash($formData['password'], PASSWORD_BCRYPT, ['cost' => 12]);
+
+        $passwordsMatch = password_verify($passwordHashed, $user['password'] ?? '');
 
         if (!$user || $passwordsMatch) {
             throw new ValidationException(['password' => 'Invalid credentials.']);
